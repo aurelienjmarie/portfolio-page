@@ -1,0 +1,67 @@
+/* Reset CSS */
+html, body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Section styles */
+  .section {
+    padding: 2rem 0;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Social links styles */
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+  
