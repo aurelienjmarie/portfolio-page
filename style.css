@@ -49,6 +49,13 @@ html, body, h1, h2, p, ul, li, a {
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .hover-zoom:hover {
+    transform: scale(1.1); /* oder einen anderen Wert für den Zoom-Faktor */
+    transition: transform 0.3s ease; /* Anpassen der Dauer und der Übergangsfunktion nach Bedarf */
+    
+  }
+  
   
   /* Footer styles */
   footer {
