@@ -1,44 +1,45 @@
-/* Reset CSS */
-html, body, h1, h2, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  
-  /* Body styles */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #0078d4;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-  }
-  
-  nav ul {
-    list-style: none;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 1rem;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+/* Header-Stile */
+
+header {
+  background-color: #0078d4;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px; /* Platz für die Kategorien unter dem Namen */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Abstand zwischen den Kategorien anpassen */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+nav a:hover {
+  color: #a1c4fd;
+}
+
+
   /* Section styles */
+  
   .section {
+    height: 100vh; /* Setzt die Höhe auf 100% der Bildschirmhöhe */
     padding: 2rem 0;
     background-color: #fff;
     text-align: center;
@@ -55,20 +56,25 @@ html, body, h1, h2, p, ul, li, a {
     transition: transform 0.3s ease; /* Anpassen der Dauer und der Übergangsfunktion nach Bedarf */
     
   }
+   
+  /* socials-links */
   
-  
-  /* Footer styles */
-  footer {
-    background-color: #0078d4;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* Social links styles */
   .icon {
     width: 24px;
     height: 24px;
     margin-right: 0.5rem;
   }
   
+  /* Footer styles */
+
+  footer {
+    position: fixed; /* Oder 'relative' je nachdem, wo der Footer positioniert werden soll */
+    bottom: 0;
+    width: 100%;
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+ 
