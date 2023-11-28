@@ -3,51 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Aurélien Marie - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
   <body>
     <header>
-      <nav>
-        <h1>Aurélien Marie</h1>
-        <ul>
-          <li><a href="#about">Über mich</a></li>
-          <li><a href="#experience">Erfahrung</a></li>
-          <li><a href="#Zukunft">Zukunft</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
+      <div class="navbar-wrapper">
+        <nav>
+          <h1>Aurélien Marie</h1>
+          <ul>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#experience">Erfahrung</a></li>
+            <li><a href="#Zukunft">Zukunft</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-    <section id="about" class="section hover-zoom">
-      <div class="container section-intro">
-        <h2>Hallo, ich bin Aurélien!</h2>
-        <p>Ich bin ein Wirtschaftsinformatik-Student und habe zuvor eine KV Lehre bei DT Swiss AG abgeschlossen, gefolgt von der Berufsmaturität Wirtschaft.</p>
-      </div>
-    </section>
-
-    <section id="experience" class="section hover-zoom">
-      <div class="container">
-        <h2>Erfahrung</h2>
-        <p>Hier wird meine berufliche Erfahrung und weitere Informationen folgen.</p>
-      </div>
-    </section>
-
-    <section id="Zukunft" class="section hover-zoom">
-      <div class="container">
-        <h2>Zukunft</h2>
-        <p>xx.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section hover-zoom">
-      <div class="container">
-        <h2>Kontakt</h2>
-        <p>Du kannst mich unter <a href="mailto:marie.aurelien@outlook.com">marie.aurelien@outlook.com</a> erreichen.</p>
-      </div>
-    </section>
-
+    <div class="section-wrapper">
+      <section id="about" class="section hover-zoom">
+        <div class="container section-intro">
+          <h2>Hallo, ich bin Aurélien!</h2>
+          <p>Ich bin ein Wirtschaftsinformatik-Student und habe zuvor eine KV Lehre bei DT Swiss AG abgeschlossen, gefolgt von der Berufsmaturität Wirtschaft.</p>
+        </div>
+      </section>
+  
+      <section id="experience" class="section hover-zoom">
+        <div class="container">
+          <h2>Erfahrung</h2>
+          <p>Hier wird meine berufliche Erfahrung und weitere Informationen folgen.</p>
+        </div>
+      </section>
+  
+      <section id="Zukunft" class="section hover-zoom">
+        <div class="container">
+          <h2>Zukunft</h2>
+          <p>xx.</p>
+        </div>
+      </section>
+  
+      <section id="contact" class="section hover-zoom">
+        <div class="container">
+          <h2>Kontakt</h2>
+          <p>Du kannst mich unter <a href="mailto:marie.aurelien@outlook.com">marie.aurelien@outlook.com</a> erreichen.</p>
+        </div>
+      </section>  
+    </div>
     <footer>
       <div class="container">
         <p>&copy; 2023 Aurélien Marie</p>
