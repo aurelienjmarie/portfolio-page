@@ -1,6 +1,9 @@
 /* Body-Stile */
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3; /* Hintergrundfarbe ändern */
 }
 
 
@@ -10,7 +13,9 @@ header {
   background-color: #0078d4;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 header h1 {
@@ -90,7 +95,24 @@ nav a:hover {
     background-color: #0078d4;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
   }
   
- 
+  header h1#animated-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  overflow: hidden;
+  animation: disappear 3s infinite alternate;
+}
+
+/* Keyframes für die Animation */
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
