@@ -1,3 +1,9 @@
+/* Body-Stile */
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /* Header-Stile */
 
 header {
@@ -9,7 +15,13 @@ header {
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 20px; /* Platz für die Kategorien unter dem Namen */
+  margin-bottom: 35px; /* Platz für die Kategorien unter dem Namen */
+}
+
+.navbar-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -37,6 +49,10 @@ nav a:hover {
 
 
   /* Section styles */
+
+  .section-wrapper{
+    margin: 75px;
+  }
   
   .section {
     height: 100vh; /* Setzt die Höhe auf 100% der Bildschirmhöhe */
