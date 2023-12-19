@@ -1,16 +1,86 @@
 /* Body-Stile */
-body{
+body {
   font-family: 'Oswald', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f3f3f3; /* Hintergrundfarbe ändern */
+  display: grid
+  
+ /* Button*/
+}
+
+.top {
+  --offset: 50px; 
+  
+  position: sticky;
+  bottom: 20px;      
+  margin-right:10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visuelles Styling */
+  width:45px;
+  aspect-ratio:1;
+  background:#4e4a47;
+  border-radius:10px;
+}
+.top:before {
+  content:"";
+  position:absolute;
+  inset:30%;
+  transform:translateY(20%) rotate(-45deg);
+  border-top:5px solid #fff;
+  border-right:5px solid #fff;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* Entferne den folgenden Teil, wenn du kein sanftes Scrollen wünschst */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Bildstile */
+.section img {
+  max-width: 30%; /* Bildgröße anpassen */
+  display: block; /* Bild als Blockelement rendern */
+  margin: 0 auto 20px; /* Zentrieren und Abstand unten hinzufügen */
+  border-radius: 50%; /* Runde Ecken für das Bild */
+  transition: transform 0.3s ease-in-out; /* Übergangseffekt */
+}
+
+/* Effekt beim Überfahren des Bildes */
+.section img:hover {
+  transform: scale(1.1); /* Vergrößerung des Bildes */
+}
+
+.social-links a {
+  display: inline-flex; /* Damit die Anker als Inline-Flex-Elemente angezeigt werden */
+  align-items: center; /* Zentriert die Icons vertikal */
+  justify-content: center; /* Zentriert die Icons horizontal */
+  width: 150px; /* Ändere die Breite der Icons */
+  height: 150px; /* Ändere die Höhe der Icons */
+  margin: 5px; /* Fügt Abstand um die Icons hinzu */
+  position: relative; /* Positionierung für das Pseudo-Element */
+}
+
+.social-links a::before {
+  content: ''; /* Fügt das Pseudo-Element hinzu */
+  position: absolute; /* Positioniert das Pseudo-Element relativ zum Anker-Element */
+  top: 0; /* Positioniert das Pseudo-Element oben */
+  right: 0; /* Positioniert das Pseudo-Element rechts */
+  bottom: 0; /* Positioniert das Pseudo-Element unten */
+  left: 0; /* Positioniert das Pseudo-Element links */
+  pointer-events: none; /* Verhindert, dass das Pseudo-Element Klicks erhält */
 }
 
 
 /* Header-Stile */
-
 header {
-  background-color: #0078d4;
+  background-color: #130e0e;
   color: #fff;
   text-align: center;
   padding: 0;
@@ -20,10 +90,10 @@ header {
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 35px; /* Platz für die Kategorien unter dem Namen */
+  margin-bottom: 135px; /* Platz für die Kategorien unter dem Namen */
 }
 
-.navbar-wrapper{
+.navbar-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,72 +117,86 @@ nav a {
   text-decoration: none;
 }
 
-
 nav a:hover {
   color: #a1c4fd;
 }
 
-
-  /* Section styles */
-
-  .section-wrapper{
-    margin: 75px;
-  }
-  
-  .section {
-    height: 100vh; /* Setzt die Höhe auf 100% der Bildschirmhöhe */
-    padding: 2rem 0;
-    background-color: #fff;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .hover-zoom:hover {
-    transform: scale(1.1); /* oder einen anderen Wert für den Zoom-Faktor */
-    transition: transform 0.3s ease; /* Anpassen der Dauer und der Übergangsfunktion nach Bedarf */
-    
-  }
-   
-  /* socials-links */
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 0.5rem;
-  }
-  
-  /* Footer styles */
-
-  footer {
-    position: fixed; /* Oder 'relative' je nachdem, wo der Footer positioniert werden soll */
-    bottom: 0;
-    width: 100%;
-    background-color: #0078d4;
-    color: #fff;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  header h1#animated-name {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  overflow: hidden;
-  animation: disappear 3s infinite alternate;
+/* Section styles */
+.section-wrapper {
+  margin: 10px;
 }
 
-/* Keyframes für die Animation */
-@keyframes disappear {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+.section {
+  height: 100vh; /* Setzt die Höhe auf 100% der Bildschirmhöhe */
+  padding: 2rem 0;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.1); /* oder einen anderen Wert für den Zoom-Faktor */
+  transition: transform 0.3s ease; /* Anpassen der Dauer und der Übergangsfunktion nach Bedarf */
+}
+
+
+/* Footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #130e0e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  height: 120px;
+  margin: 0;
+}
+
+footer p {
+  margin: 0; /* Den Standardabstand entfernen */
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social-links {
+  display: center;
+  align-items: center;
+}
+
+footer .icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px; /* Anpassung des Abstands */
+}
+
+/* ... */
+header h1.waviy { /* Neue Klasse "waviy" für den animierten Text */
+  font-size: 2rem;
+  margin-bottom: 35px; /* Platz für die Kategorien unter dem Namen */
+  color: #fff; /* Textfarbe anpassen */
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.1s * var(--i)); /* Anpassung der Verzögerung */
+}
+
+@keyframes flip {
+  0%, 80% {
+    transform: rotateY(360deg);
   }
 }
