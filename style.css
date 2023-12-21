@@ -5,10 +5,22 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ea1f70; /* Hintergrundfarbe ändern */
-  display: grid
-  
- /* Button*/
+  display: grid;
+
 }
+
+
+ /* p schriftart*/
+
+p {
+  font-size: 15px;
+  font-weight: normal; /* Um die Schrift nicht fett zu machen */
+  font-family: 'Montserrat', sans-serif; /* Anpassung der Schriftart */
+}
+
+
+
+ /* Button*/
 
 .top {
   --offset: 50px; 
@@ -38,7 +50,7 @@ p {
   font-size: 15px;
 }
 
-/* Entferne den folgenden Teil, wenn du kein sanftes Scrollen wünschst */
+
 html,
 body {
   scroll-behavior: smooth;
@@ -134,7 +146,7 @@ nav a:hover {
 /* Section styles */
 .section-wrapper {
   margin: 10px;
-}
+  }
 
 .section {
   height: 100vh; /* Setzt die Höhe auf 100% der Bildschirmhöhe */
@@ -157,6 +169,10 @@ nav a:hover {
 
 /* karteikarten */
 
+/*
+#experience{
+
+} .experience-section -> funktioniert nicht, musst auf die ID zugreifen, siehe oben */
 
 .experience-section{
   align-items: flex-start;
@@ -275,8 +291,19 @@ footer .footer-content {
 }
 
 footer .social-links {
-  display: center;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+footer .social-links a {
+  display: block;
+  align-items: center; /* Zentriert die Icons vertikal */
+  justify-content: center; /* Zentriert die Icons horizontal */
+  width: 150px; /* Ändere die Breite der Icons */
+  height: 150px; /* Ändere die Höhe der Icons */
+  margin: 5px; /* Fügt Abstand um die Icons hinzu */
+  position: relative; /* Positionierung für das Pseudo-Element */
 }
 
 footer .icon {
@@ -330,7 +357,7 @@ body, button, input {
 
 .container {
   flex: 0 1 700px;
-  margin: auto;
+  margin: 50px auto 0 auto; 
   padding: 10px;
 }
 
@@ -510,6 +537,76 @@ body, button, input {
   margin: 0 5px;
 }
 
+
+/* Zukunft */
+
+#zukunft {
+
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.pic-ctn {
+  width: 80%; /* Anpassen der Breite für die Bilder */
+  max-width: 1000px; /* Maximale Breite, um sicherzustellen, dass sie nicht zu breit werden */
+  height: auto; /* Anpassung der Höhe, um die Proportionen beizubehalten */
+  position: relative;
+}
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 15vh;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: -13vh;
+  left: calc(34% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+  margin-top: 1vh; 
+}
+
+img:nth-child(1) {
+  animation-delay: 2s;
+}
+img:nth-child(2) {
+  animation-delay: 5s;
+}
+img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+
+
 @media screen and (max-width: 520px) {
   .screen-body {
     flex-direction: column;
@@ -541,6 +638,3 @@ body, button, input {
     padding: 0;
   }
 }
-
-
-
