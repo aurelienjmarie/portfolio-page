@@ -255,12 +255,19 @@ nav a:hover {
   text-transform: uppercase;
 }
 
-.card__heading{
-  color:#ffffff;
-  font-size: 1.9rem;
+.card__heading {
+  color: #ffffff;
+  font-size: 1.5rem; /* Schriftgröße reduziert */
   text-shadow: 2px 2px 20px rgba(202, 28, 28, 0.2);
   line-height: 1.4;
   word-spacing: 100vw;
+}
+
+.card__year {
+  color: #ffffff;
+  font-size: 1rem; /* Größe nach Bedarf anpassen */
+  margin-top: 8px; /* Abstand zum Titel */
+  align-self: center; /* Zentriert das Jahr vertikal */
 }
 
 
@@ -275,8 +282,8 @@ footer {
   background-color: #130e0e;
   color: #fff;
   text-align: center;
-  padding: 20px;
-  height: 120px;
+  padding: 0px;
+  height: 125px;
   margin: 0;
 }
 
@@ -309,7 +316,7 @@ footer .social-links a {
 footer .icon {
   width: 30px;
   height: 30px;
-  margin-left: 10px; /* Anpassung des Abstands */
+  margin-left: 0px; /* Anpassung des Abstands */
 }
 
 /* ... */
@@ -512,31 +519,6 @@ body, button, input {
   color: #b9134f;
 }
 
-.credits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  color: #ffa4bd;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.credits-link {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.dribbble {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-}
-
 
 /* Zukunft */
 
@@ -604,6 +586,26 @@ img:nth-child(2) {
 img:nth-child(3) {
   animation-delay: 8s;
 }
+
+
+.github-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 200px;
+}
+
+.github-button:hover {
+  background-color: #555;
+}
+
+
+
+
+
 
 
 
